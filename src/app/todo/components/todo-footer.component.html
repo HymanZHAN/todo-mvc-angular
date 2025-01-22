@@ -1,0 +1,13 @@
+<section class="flex flex-row justify-between items-center">
+  <div class="text-sm text-gray-600">
+    {{ service.doneCount() }} done / {{ service.totalCount() }} total
+  </div>
+  <button
+    [disabled]="service.doneCount() === 0"
+    (click)="service.clearDoneTodos()"
+    class="px-4 py-2 rounded-lg"
+    [class]="service.doneCount() > 0 ? 'bg-pink-500 text-white' : 'bg-gray-200'"
+  >
+    Clear Done
+  </button>
+</section>
