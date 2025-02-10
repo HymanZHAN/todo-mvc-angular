@@ -5,7 +5,7 @@
   <button
     [disabled]="service.doneCount() === 0"
     (click)="service.clearDoneTodos()"
-    class="px-4 py-2 rounded-lg"
+    class="cursor-pointer px-4 py-2 rounded-lg"
     [class]="service.doneCount() > 0 ? 'bg-pink-500 text-white' : 'bg-gray-200'"
   >
     Clear Done

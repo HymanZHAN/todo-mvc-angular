@@ -5,11 +5,11 @@
       name="New Todo"
       [(ngModel)]="newTodo"
       placeholder="What needs to be done?"
-      class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      class="flex-1 px-4 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
     />
     <button
       type="submit"
-      class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+      class="cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
     >
       Add
     </button>
@@ -18,7 +18,7 @@
   <div class="flex gap-2">
     <button
       (click)="service.updateFilter('all')"
-      class="px-4 py-2 rounded-lg"
+      class="cursor-pointer px-4 py-2 rounded-lg"
       [class]="
         service.filter() === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'
       "
@@ -27,7 +27,7 @@
     </button>
     <button
       (click)="service.updateFilter('done')"
-      class="px-4 py-2 rounded-lg"
+      class="cursor-pointer px-4 py-2 rounded-lg"
       [class]="
         service.filter() === 'done' ? 'bg-blue-500 text-white' : 'bg-gray-200'
       "
@@ -36,7 +36,7 @@
     </button>
     <button
       (click)="service.updateFilter('todo')"
-      class="px-4 py-2 rounded-lg"
+      class="cursor-pointer px-4 py-2 rounded-lg"
       [class]="
         service.filter() === 'todo' ? 'bg-blue-500 text-white' : 'bg-gray-200'
       "
